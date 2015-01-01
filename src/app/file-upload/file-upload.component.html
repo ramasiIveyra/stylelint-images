@@ -1,0 +1,26 @@
+
+<div class="container mt-5">
+  <h2 class="mb-4">File Upload</h2>
+  
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" (change)="onFileSelected($event)" />
+    <label class="custom-file-label" for="customFile">Choose file</label>
+  </div>
+
+  <div *ngIf="file" class="mt-3">
+    <p class="font-weight-bold">Selected File: {{ file.name }}</p>
+    
+    <div class="progress">
+      <div
+        class="progress-bar"
+        role="progressbar"
+        [style.width]="progress + '%'"
+        [attr.aria-valuenow]="progress"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        {{ progress }}%
+      </div>
+    </div>
+  </div>
+</div>

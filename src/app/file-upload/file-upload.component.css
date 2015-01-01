@@ -1,0 +1,9 @@
+/* file-upload.component.css */
+
+.progress {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 20px;
+}
